@@ -1,10 +1,11 @@
+from CameraIf import CameraIf
 from picamera import PiCamera
 from picamera.array import PiRGBArray
 import cv2
 
 from Logger import log
 
-class SecutiryCameraPi:
+class SecutiryCameraPi(CameraIf):
 
 	def __init__(self):
 		port = 0

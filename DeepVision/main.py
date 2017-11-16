@@ -1,4 +1,4 @@
-from securityCamera import SecutiryCamera
+from securityCameraW10 import SecutiryCameraW10
 from watchdog import WatchDog
 
 from facereco import IntruderDetection
@@ -39,7 +39,7 @@ monitoringDir = rootDir + "/monitoring"
 intruderLDM = IntruderDetection(trainingDir,monitoringDir)
 intruderLDM.train()
 
-eyes = SecutiryCamera()
+eyes = SecutiryCameraW10()
 watchdog = WatchDog(eyes,intruderLDM)
 
 watchdog.watch()
